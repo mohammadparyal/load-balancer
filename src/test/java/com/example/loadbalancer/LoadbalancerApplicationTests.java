@@ -31,6 +31,9 @@ class LoadbalancerApplicationTests {
         Assert.isTrue(1 == BackendHostsPool.getBackendHostsMap().size(), "Backend size after removing should be 1");
         BackendHostsPool.add("https://www.google.com/api/v1/public");
         Assert.isTrue(2 == BackendHostsPool.getBackendHostsMap().size(), "Backend size should be now 2");
+        BackendHostsPool.disable("https://www.google.com/api/v1/public");
+        BackendHostsPool.enable("https://www.google.com/api/v1/public");
+        Assert.isTrue(2 == BackendHostsPool.getBackendHostsList().size(), "Backend active host should be 2");
     }
 
 }

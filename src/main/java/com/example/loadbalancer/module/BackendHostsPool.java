@@ -11,11 +11,11 @@ import java.util.stream.Collectors;
 
 public class BackendHostsPool {
 
+    public static final int                         MAX_HOSTS_CAPACITY_ALLOWED = 10;
     /**
      * Host name : IsActive
      */
     private static final Map<String, Boolean> BACKEND_HOSTS_POOL_MAP;
-    public static final int                         MAX_HOSTS_CAPACITY_ALLOWED = 10;
 
     static {
         BACKEND_HOSTS_POOL_MAP = new ConcurrentHashMap<>(MAX_HOSTS_CAPACITY_ALLOWED);
