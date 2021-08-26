@@ -1,9 +1,3 @@
 spring:
   main:
     web-application-type: none
-
-config:
-  max-hosts-allowed: 10
-  hosts:
-    - https://www.google.com/api/v1/public
-    - https://www.google.com/api/v2/internal
